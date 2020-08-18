@@ -437,11 +437,14 @@ main .c_04 .contact div a {
     display: block;
     line-height: 4rem;
     font-size: 2rem;
-
-
+    transition: .2s;
 }
 
-main .c_04 .contact div a:after {
+main .c_04 .contact div a:hover{
+    color: #f8bebe;
+}
+
+main .c_04 .contact div:last-child a:after {
     content: '-';
     display: inline-block;
     padding-left: 0.5rem;

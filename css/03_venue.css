@@ -60,6 +60,7 @@ main>span {
 main>span::after {
     content: '↓';
     display: block;
+    font-size: 2.5rem;
     margin-top: 3rem;
 }
 
@@ -148,7 +149,7 @@ main .v_01 .process article h3 {
 
 main .v_01 .process article p {
     font-size: 2rem;
-    line-height: 1.5;
+    line-height: 1.8;
     white-space: pre-line;
 }
 
@@ -157,7 +158,7 @@ main .v_01 .process article h4 {
     font-size: 3.5rem;
 }
 
-main .v_01 .process article h4::after {
+main .v_01 .process article h4:after {
     content: '';
     display: block;
     width: 3rem;
@@ -189,6 +190,9 @@ main .v_02 div:first-child img {
 main .v_02 div:last-child {
     width: 40%;
     padding-left: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 main .v_02 div:last-child P {
@@ -206,11 +210,15 @@ main .v_02 div:last-child P::after{
 }
 
 main .v_02 div:last-child a {
-    display: inline-block;
     background: #e6e2dd;
+    width: 11rem;
     font-size: 1.5rem;
     padding: 3rem 1.5rem;
     margin-top: 2rem;
+    transition: .5s;
+}
+main .v_02 div:last-child a:hover{
+    background: #f8bebe;
 }
 
 /* ================================================= */

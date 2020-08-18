@@ -1,8 +1,14 @@
 @import url('common_sub.css');
 
+html, body {
+    background: #ededed;
+}
+
 main .subject {
     padding-bottom: 5rem;
 }
+
+/*===========================================================*/
 
 main .p_01 {
     width: 100%;

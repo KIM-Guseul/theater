@@ -1,6 +1,7 @@
 @import url('common_sub.css');
 
-html, body {
+html,
+body {
     background: #e6e3de;
 }
 
@@ -21,6 +22,7 @@ main .a_00 h2 {}
 main .a_00 h2::after {
     content: '↓';
     display: block;
+    font-size: 2.5rem;
     margin: 4rem 0;
 }
 
@@ -125,6 +127,7 @@ main .a_03 ul li {
     width: 25%;
     height: 27rem;
     padding: 1px;
+    position: relative;
 }
 
 main .a_03 ul li:hover {
@@ -133,6 +136,22 @@ main .a_03 ul li:hover {
 
 main .a_03 ul li.active {
     filter: grayscale(100%);
+}
+
+main .a_03 ul li.active:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: 0;
+    
+    width: 0;
+    height: 0;
+    border-top: 20px solid none;
+    border-bottom: 20px solid #e6e2de;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+
 }
 
 main .a_03 ul li img {

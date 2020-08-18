@@ -1,0 +1,148 @@
+@import url('common_sub.css');
+
+html, body {
+    background: #e6e3de;
+}
+
+/* =================================================== */
+main .subject h1 span {
+    border: 5px solid #303030;
+    padding: 0 10rem;
+}
+
+/* ================================================= */
+main .a_00 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .a_00 h2 {}
+
+main .a_00 h2::after {
+    content: '↓';
+    display: block;
+    margin: 4rem 0;
+}
+
+main .a_00 img {
+    width: 100%;
+}
+
+/* =================================================== */
+main .a_01 {
+    width: 80%;
+    margin: 7rem auto;
+    position: relative;
+}
+
+main .a_01 div {
+    text-align: center;
+    font-size: 8rem;
+    margin: 7rem 0;
+}
+
+main .a_01 div b {
+    font-size: 10rem;
+}
+
+main .a_01 p {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+main .a_01 img {
+    display: block;
+    margin: 7rem auto;
+}
+
+/* =================================================== */
+main .a_02 {
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #303030;
+}
+
+main .a_02 h2 {
+    margin-bottom: 3.5rem;
+}
+
+main .a_02 .history {
+    display: flex;
+    justify-content: center;
+}
+
+main .a_02 .history article {
+    width: 50%;
+    margin: 0 auto;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; */
+}
+
+main .a_02 .history article:first-child {
+    border-right: 1px solid #303030;
+}
+
+main .a_02 .history article h3 {
+    text-align: center;
+    font-size: 6rem;
+    margin: 3rem 0 9.5rem 0;
+}
+
+main .a_02 .history article img {
+    display: block;
+    margin: 0 auto;
+}
+
+main .a_02 .history article p {
+    white-space: pre-line;
+    font-size: 2rem;
+    line-height: 1.8;
+    text-align: center;
+    margin: 8.5rem 0;
+}
+
+/* =================================================== */
+main .a_03 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+main .a_03 h2 {
+    margin-bottom: 9.5rem;
+}
+
+main .a_03 ul {
+    display: flex;
+    flex-direction: row;
+}
+
+main .a_03 ul li {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 25%;
+    height: 27rem;
+    padding: 1px;
+}
+
+main .a_03 ul li:hover {
+    filter: grayscale(100%);
+}
+
+main .a_03 ul li.active {
+    filter: grayscale(100%);
+}
+
+main .a_03 ul li img {
+    height: 100%;
+}
+
+main .a_03 div {
+    width: 100%;
+}
+
+main .a_03 div img {
+    width: 100%;
+}

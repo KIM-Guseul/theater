@@ -1,0 +1,220 @@
+@import url('common_sub.css');
+
+html, body {
+    background: #303030;
+}
+
+header .logo p {
+    color: #e6e2dd;
+}
+
+header .logo p:before, header nav:before {
+    border-top: 1px solid #e6e2dd;
+}
+
+header .logo p:after, header nav:after {
+    border-bottom: 1px solid #e6e2dd;
+}
+
+header nav a {
+    color: #e6e2dd;
+}
+
+header nav a.active:after, header nav a:hover:after {
+    border-top: 1px solid #f8bebe;
+}
+
+/* ==================================================== */
+main .subject {
+    width: 60%;
+}
+
+main .subject div {
+    width: 100%;
+}
+
+main .subject div h2 {
+    padding: 3rem 20rem;
+    background: #f8bebe;
+    color: #303030;
+    fons-size: 2.5rem;
+    letter-spacing: 1.5rem;
+}
+
+main .subject div h1 {
+    margin: 0;
+    color: #e6e2dd;
+    border: 1px solid #e6e2dd;
+    border-top: none;
+}
+
+main>span {
+    color: #e6e2dd;
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 7.5rem;
+    letter-spacing: 0.5rem;
+}
+
+main>span::after {
+    content: '↓';
+    display: block;
+    margin-top: 3rem;
+}
+
+/* ======================================================== */
+main aside {
+    width: 15%;
+    position: fixed;
+    right: 0;
+    top: 50%;
+}
+
+main aside h5 {
+    color: #e6e2dd;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e6e2dd;
+}
+
+main aside .intro {
+    padding-left: 20%;
+}
+
+main aside .intro li {
+    display: flex;
+    margin-top: 3rem;
+}
+
+main aside .intro li.active span{
+    color: #f8bebe;
+}
+
+main aside .intro li span {
+    font-size: 1.5rem;
+    color: #e6e2dd;
+    white-space: pre-line;
+}
+main aside .intro li span:first-child{
+    display: inline-block;
+    width: 30%;
+
+}
+
+/* ======================================================== */
+main .v_01 {
+    width: 85%;
+    background: #e6e2dd;
+    margin-top: 10rem;
+}
+
+main .v_01 .process {
+    display: flex;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #303030;
+    height: 100vh;
+}
+
+main .v_01 .process div {
+    width: 60%;
+    border-right: 1px solid #303030;
+}
+
+main .v_01 .process div img {
+
+}
+
+main .v_01 .process div video {}
+
+main .v_01 .process article {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 6rem;
+}
+
+main .v_01 .process article span {
+    font-size: 1.5rem;
+}
+
+main .v_01 .process article h3 {
+    font-size: 5.5rem;
+    margin: 3.5rem 0 7.5rem 0;
+}
+
+main .v_01 .process article p {
+    font-size: 2rem;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+main .v_01 .process article h4 {
+    margin: 10rem 0 4rem 0;
+    font-size: 3.5rem;
+}
+
+main .v_01 .process article h4::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 0.2rem;
+    background: #303030;
+    margin-top: 2rem;
+}
+
+main .v_01 .process article a {
+    font-size: 2rem;
+}
+
+/* ================================================= */
+main .v_02 {
+    width: 85%;
+    height: 100vh;
+    display: flex;
+}
+
+main .v_02 div:first-child {
+    width: 60%;
+    height: 100%;
+    background: #e6e2dd;
+}
+
+main .v_02 div:first-child img {
+}
+
+main .v_02 div:last-child {
+    width: 40%;
+    padding-left: 6rem;
+}
+
+main .v_02 div:last-child P {
+    font-size: 3.5rem;
+    color: #f8bebe;
+    white-space: pre-line;
+}
+main .v_02 div:last-child P::after{
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 0.2rem;
+    background: #f8bebe;
+    margin-top: 1.5rem;
+}
+
+main .v_02 div:last-child a {
+    display: inline-block;
+    background: #e6e2dd;
+    font-size: 1.5rem;
+    padding: 3rem 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ================================================= */
+
+main > div {
+    background: #e6e2dd;
+}

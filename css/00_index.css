@@ -1,0 +1,465 @@
+@import url('common.css');
+
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    background: #e6e2de;
+}
+
+/*========================= 헤더 ==========================*/
+
+.header {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+header .logo {
+    height: 16rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo p {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+header .logo p:first-child:before {
+    position: absolute;
+    left: 0;
+    top: -70%;
+    content: '';
+    display: block;
+    width: calc((80vw - 35rem)/2);
+    border-top: 1px solid #303030;
+}
+
+header .logo p:last-child:before {
+    position: absolute;
+    right: 0;
+    top: -70%;
+    content: '';
+    display: block;
+    width: calc((80vw - 35rem)/2);
+    border-top: 1px solid #303030;
+
+}
+
+header .logo p:first-child:after {
+    position: absolute;
+    left: 0;
+    bottom: -70%;
+    content: '';
+    display: block;
+    width: calc((80vw - 35rem)/2);
+    border-bottom: 1px solid #303030;
+}
+
+header .logo p:last-child:after {
+    position: absolute;
+    right: 0;
+    bottom: -70%;
+    content: '';
+    display: block;
+    width: calc((80vw - 35rem)/2);
+    border-bottom: 1px solid #303030;
+}
+
+
+
+header .logo a {
+    transform: translateX(45%);
+}
+
+header .logo a img {
+    width: 100%;
+}
+
+header .title {
+    text-align: center;
+    font-size: 12rem;
+    margin: -50px 0;
+}
+
+header nav {
+    width: 100%;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+header nav a {
+    position: relative;
+    margin-right: 9rem;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+}
+
+header nav a:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: '';
+    display: block;
+    width: 0;
+    border-top: 1px solid #303030;
+    transition: .3s;
+}
+
+
+header nav a:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+
+header nav a:last-child {
+    margin-right: 0;
+}
+
+/*======================== 메인 ==========================*/
+
+main {}
+
+main .video {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .video video {
+    width: 100%;
+    height: 100%;
+}
+
+main .video video source {}
+
+/*=================================*/
+
+main .c_01 {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 7rem;
+    text-align: center;
+
+}
+
+main h2 {
+    padding: 7rem 0;
+    font-size: 2rem;
+
+}
+
+main .c_01 p {
+    text-align: center;
+    margin: 0 4rem 2rem 4rem;
+    font-size: 10rem;
+}
+
+main .c_01 p b {
+    font-size: 12rem;
+
+}
+
+main .c_01 a {
+    display: inline-block;
+    margin-top: 7rem;
+    padding: 3.5rem 2rem;
+    border: 1px solid #303030;
+    font-size: 1.5rem;
+    color: #303030;
+    transition: .5s;
+}
+
+main .c_01 a:hover {
+    background: #f8bebe;
+}
+
+
+/*=================================*/
+
+main .c_02 {
+    background: #303030;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 7rem;
+
+    position: relative;
+    z-index: 2;
+
+}
+
+.c_02 h2,
+.c_02 span,
+.c_02 h3 {
+    color: #e6e3de;
+}
+
+main .c_02 h2 {
+    width: 100%;
+}
+
+main .c_02 .li_show {}
+
+main .c_02 .li_show li a {
+    width: 80%;
+    height: 30wh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e6e3de;
+
+    overflow: hidden;
+    position: relative;
+}
+
+main .c_02 .li_show li:nth-of-type(1) a:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0%;
+    opacity: 0;
+    background: url('../img/show01.png') no-repeat 0 43%;
+    background-size: cover;
+    transition: .3s;
+}
+
+main .c_02 .li_show li:nth-of-type(2) a:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0%;
+    opacity: 0;
+    background: url('../img/show02.png') no-repeat 0 70%;
+    background-size: cover;
+    transition: .3s;
+
+}
+
+main .c_02 .li_show li:nth-of-type(3) a:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0%;
+    opacity: 0;
+    background: url('../img/show03.png') no-repeat 0 50%;
+    background-size: cover;
+    transition: .3s;
+}
+
+main .c_02 .li_show li:nth-of-type(1) a:hover:before,
+main .c_02 .li_show li:nth-of-type(2) a:hover:before,
+main .c_02 .li_show li:nth-of-type(3) a:hover:before {
+    top: 0;
+    opacity: 1;
+}
+
+main .c_02 .li_show li a span {}
+
+main .c_02 .li_show li a span:first-child {
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 3rem 0 0 6rem;
+}
+
+main .c_02 .li_show li a span:last-child {
+    text-align: right;
+    font-size: 1.8rem;
+    margin: 0 6rem 3rem 6rem;
+    position: relative;
+}
+
+main .c_02 .li_show li a span:last-child:before {
+    content: '→';
+    position: absolute;
+    right: 50%;
+    bottom: 0%;
+    display: block;
+    font-size: 2rem;
+}
+
+
+main .c_02 .li_show li a h3 {
+    position: relative;
+    font-size: 4.5vw;
+    margin: 3.5rem auto;
+
+}
+
+main .c_02 .li_show li:last-child a {
+    background: #e6e3de;
+    transition: .5s;
+
+}
+
+main .c_02 .li_show li:last-child:hover  a {
+    background: #f8bebe;
+}
+
+main .c_02 .li_show li:last-child  a h3 {
+    line-height: 20rem;
+    color: #303030;
+    font-size: 8rem;
+}
+
+main .c_02 .li_show li:last-child  a h3:after {
+    content: '→';
+    position: absolute;
+    right: 50%;
+    bottom: -50%;
+    display: block;
+    font-size: 2rem;
+
+}
+
+/*==================================*/
+
+main .c_03 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .c_03 h3 {
+    padding: 7rem 0 9rem 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+main .c_03 div {
+    display: flex;
+    padding-bottom: 1.5rem;
+}
+
+main .c_03 div article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    width: 50%;
+}
+
+main .c_03 div article:first-child {
+    border-right: 1px solid #303030;
+}
+
+main .c_03 div article h2 {
+    padding-top: 0;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+main .c_03 div article img {
+    display: block;
+    margin: 0 auto;
+    width: 30rem;
+    height: 30rem;
+}
+
+main .c_03 div article .arrow {
+    margin-top: 7.5rem;
+    color: #e6e3de;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    background: #303030;
+    transition: .5s;
+}
+
+main .c_03 div article .arrow:hover {
+    color: #303030;
+    background: #f8bebe;
+
+}
+
+/*=========================================*/
+
+main .c_04 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    border-top: 1px solid #303030;
+}
+
+main .c_04 > div {
+    width: 30%;
+    padding: 7rem 0 0 3rem;
+    margin-right: 5rem;
+    border-right: 1px solid #303030;
+}
+
+main .c_04 > div a {}
+
+main .c_04 > div a img {}
+
+main .c_04 .contact {
+    width: 70%;
+    margin: 7rem 0 11rem 5.5rem;
+}
+
+main .c_04 .contact div {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+}
+
+main .c_04 .contact div:first-child {
+    margin: 0 18rem 11rem 0;
+
+}
+
+main .c_04 .contact div h4 {
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+
+}
+
+main .c_04 .contact div p {
+    white-space: pre-line;
+    line-height: 4rem;
+    font-size: 2rem;
+
+}
+
+main .c_04 .contact div a {
+    display: block;
+    line-height: 4rem;
+    font-size: 2rem;
+
+
+}
+
+main .c_04 .contact div a:after {
+    content: '-';
+    display: inline-block;
+    padding-left: 0.5rem;
+}
+
+/*=======================================*/
+
+footer {
+    width: 100%;
+    height: 7rem;
+    background: #303030;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #f8bebe;
+    text-align: center;
+    line-height: 7rem;
+    white-space: pre-wrap;
+
+}

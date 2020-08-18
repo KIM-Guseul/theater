@@ -1,0 +1,62 @@
+@import url('common_sub.css');
+
+main .subject {
+    padding-bottom: 5rem;
+}
+
+main .p_01 {
+    width: 100%;
+    background: #303030;
+    padding: 7.5rem 0;
+}
+
+main .p_01 h2, main .p_01 div, main .p_01 p {
+    color: #e6e3de;
+}
+
+main .p_01 h2 {
+    text-align: center;
+    margin: 0;
+}
+
+main .p_01 div {
+    margin-top: 7.5rem;
+    white-space: pre-line;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10rem;
+}
+
+main .p_01 p {
+    margin: 7rem 0;
+    white-space: pre-line;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+main .p_01 img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ================================================================= */
+main .p_02 {
+    width: 100%;
+    padding: 4.5rem 0;
+}
+
+main .p_02 div:first-child {
+    padding: 10rem 0 10rem 33rem;
+    width: 45%;
+    border-right: 1px solid #303030;
+    white-space: pre-line;
+    font-size: 2rem;
+    line-height: 3;
+}
+
+main .p_02 div:last-child {
+    width: 55%;
+}
+
+/* ================================================================= */

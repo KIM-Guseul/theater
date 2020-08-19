@@ -1,7 +1,8 @@
 @import url('common_sub.css');
 
-html, body {
-    background: #ededed;
+html,
+body {
+    background: #e6e2dd;
 }
 
 main .subject {
@@ -16,8 +17,10 @@ main .p_01 {
     padding: 7.5rem 0;
 }
 
-main .p_01 h2, main .p_01 div, main .p_01 p {
-    color: #e6e3de;
+main .p_01 h2,
+main .p_01 div,
+main .p_01 p {
+    color: #e6e2dd;
 }
 
 main .p_01 h2 {
@@ -48,21 +51,49 @@ main .p_01 img {
 
 /* ================================================================= */
 main .p_02 {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     padding: 4.5rem 0;
+    display: flex;
 }
 
-main .p_02 div:first-child {
-    padding: 10rem 0 10rem 33rem;
-    width: 45%;
+main .p_02 > div:first-child {
+    padding: 10rem 0 10rem 20rem;
+    width: 40%;
     border-right: 1px solid #303030;
     white-space: pre-line;
     font-size: 2rem;
     line-height: 3;
 }
 
-main .p_02 div:last-child {
-    width: 55%;
+main .p_02 .schedule {
+    padding-top: 5rem;
+    width: 60%;
 }
 
-/* ================================================================= */
+main .p_02 .schedule div {
+    text-align: center;
+}
+
+main .p_02 .schedule div a {
+    font-size: 5rem;
+    color: #e6e2dd;
+    background: #303030;
+    padding: 0 2rem;
+}
+
+main .p_02 .schedule div span {
+    font-size: 8rem;
+    margin: -2rem 10rem;
+
+}
+
+main .p_02 .schedule p {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 10rem;
+    font-weight: bold;
+
+}
+
+=================================================================*/

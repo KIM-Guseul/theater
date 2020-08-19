@@ -292,11 +292,18 @@ main .c_02 .li_show li a span:last-child:before {
 }
 
 
-main .c_02 .li_show li a h3 {
-    position: relative;
+main .c_02 .li_show li a div{
+    overflow: hidden;
+    
+}
+
+main .c_02 .li_show li a div h3{
     font-size: 4.5vw;
     margin: 3.5rem auto;
-
+/*
+    transform: translateY(80%);
+    opacity: 0;
+*/
 }
 
 main .c_02 .li_show li:last-child a {
@@ -319,7 +326,7 @@ main .c_02 .li_show li:last-child  a h3:after {
     content: '→';
     position: absolute;
     right: 50%;
-    bottom: -50%;
+    top: 50%;
     display: block;
     font-size: 2rem;
 

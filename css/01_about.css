@@ -117,6 +117,7 @@ main .a_03 h2 {
 }
 
 main .a_03 ul {
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -124,9 +125,9 @@ main .a_03 ul {
 main .a_03 ul li {
     overflow: hidden;
     margin: 0 auto;
+    padding: 1px;
     width: 25%;
     height: 27rem;
-    padding: 1px;
     position: relative;
 }
 
@@ -144,7 +145,7 @@ main .a_03 ul li.active:after {
     position: absolute;
     left: calc(50% - 10px);
     bottom: 0;
-    
+
     width: 0;
     height: 0;
     border-top: 20px solid none;
@@ -155,13 +156,25 @@ main .a_03 ul li.active:after {
 }
 
 main .a_03 ul li img {
+    width: 100%;
     height: 100%;
 }
 
-main .a_03 div {
+main .a_03 > div {
     width: 100%;
+    height: 70vh;
+    overflow: hidden;
 }
 
-main .a_03 div img {
+main .a_03 div > div {
+    width: 100%;
+    display: none;
+}
+
+main .a_03 div.active {
+    display: block;
+}
+
+main .a_03 div > div img {
     width: 100%;
 }

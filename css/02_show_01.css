@@ -186,7 +186,8 @@ main .s_li_01 div {
     width: 70%;
     white-space: pre-line;
     font-size: 5rem;
-    padding: 15rem 0 15rem 20rem;
+    font-weight:bold;
+    padding: 15rem 0 15rem 25rem;
     border-left: 1px solid #303030;
 
 }

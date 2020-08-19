@@ -72,14 +72,17 @@ main .p_02 .schedule {
 }
 
 main .p_02 .schedule div {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main .p_02 .schedule div a {
     font-size: 5rem;
     color: #e6e2dd;
+    height: 8rem;
     background: #303030;
-    padding: 0 2rem;
+    padding: 0 2.5rem;
 }
 
 main .p_02 .schedule div span {

@@ -6,10 +6,25 @@ body {
 }
 
 /* =================================================== */
-main .subject h1 span {
-    border: 5px solid #303030;
-    padding: 0 10rem;
+
+main .subject h1{
+    overflow: hidden;
+    padding: 5px 0;
 }
+main .subject h1 p {
+    display: inline-block;
+    border: 5px solid #303030;
+    padding: 0 5rem;
+    
+    transform: translateY(110%);
+
+}
+main .subject h1 span{
+    display: inline-block;
+    transform: translateY(-50%);
+}
+
+
 
 /* ================================================= */
 main .a_00 {
@@ -42,12 +57,22 @@ main .a_01 div {
     font-size: 8rem;
     margin: 7rem 0;
 }
+main .a_01 div p span:nth-of-type(1){
+    display: inline-block;
+    transform: translateX(-60%);
+    opacity:0;
+}
+main .a_01 div p span:nth-of-type(2){
+    display: inline-block;
+    transform: translateX(60%);
+    opacity:0;
+}
 
 main .a_01 div b {
     font-size: 10rem;
 }
 
-main .a_01 p {
+main .a_01 > p {
     text-align: center;
     font-size: 2rem;
     line-height: 1.8;
@@ -60,7 +85,7 @@ main .a_01 img {
 
 /* =================================================== */
 main .a_02 {
-    width: 80%;
+    width: 80vw;
     margin: 0 auto;
     border-top: 1px solid #303030;
 }
@@ -72,30 +97,48 @@ main .a_02 h2 {
 main .a_02 .history {
     display: flex;
     justify-content: center;
+    position: relative;
 }
+
+main .a_02 .history > div{
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 10px; left: 50%;
+    transform: translateX(-50%);
+    background: #e6e3de;
+    padding: 10px;
+    animation: spin 3s linear infinite ;
+}
+
+@keyframes spin {
+     25%{transform: translateX(-50%) rotateY(90deg);}
+     50%{transform: translateX(-50%) rotateY(180deg);}
+     75%{transform: translateX(-50%) rotateY(270deg);}
+     100%{transform: translateX(-50%) rotateY(360deg);}
+}
+
+main .a_02 .history > div img{}
 
 main .a_02 .history article {
-    width: 50%;
+    width: 50vw;
     margin: 0 auto;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center; */
+    text-align: center;
 }
 
-main .a_02 .history article:first-child {
+main .a_02 .history article:first-of-type {
     border-right: 1px solid #303030;
 }
 
 main .a_02 .history article h3 {
     text-align: center;
     font-size: 6rem;
-    margin: 3rem 0 9.5rem 0;
+    margin: 4rem 0 9.5rem 0;
 }
 
 main .a_02 .history article img {
-    display: block;
-    margin: 0 auto;
+    width: 30vw;
+    display: inline-block;
+    margin: 0 1rem;
 }
 
 main .a_02 .history article p {
@@ -103,7 +146,7 @@ main .a_02 .history article p {
     font-size: 2rem;
     line-height: 1.8;
     text-align: center;
-    margin: 8.5rem 0;
+    margin: 8.5rem 2rem;
 }
 
 /* =================================================== */
@@ -152,17 +195,16 @@ main .a_03 ul li.active:after {
     border-bottom: 20px solid #e6e2de;
     border-right: 20px solid transparent;
     border-left: 20px solid transparent;
-
 }
 
 main .a_03 ul li img {
     width: 100%;
-    height: 100%;
+/*    height: 100%;*/
 }
 
 main .a_03 > div {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     overflow: hidden;
 }
 
@@ -177,4 +219,39 @@ main .a_03 div.active {
 
 main .a_03 div > div img {
     width: 100%;
+}
+
+
+/*==============================================*/
+
+
+@media (max-width:1024px){
+
+    main .a_02 {width: 95vw;}
+    main .a_02 .history {display: block;}
+    main .a_02 .history > div{top: 0; left: 10vw;}
+    main .a_02 .history article {
+        width: 95vw;
+        margin: 0 auto;
+    }
+
+    main .a_02 .history article:first-of-type {
+        border-right:none;
+    }
+
+    main .a_02 .history article h3 {
+        margin: 4rem 0 7rem 0;
+    }
+
+    main .a_02 .history article img {
+        width: 40vw;
+    }
+
+    main .a_02 .history article p {
+        white-space: normal;
+        word-break: keep-all;
+    }
+
+
+    
 }

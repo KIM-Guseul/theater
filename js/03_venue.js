@@ -1,8 +1,6 @@
-//===== 01_about ==========================
-
-
 window.addEventListener('DOMContentLoaded', function () {
-
+// === mousewheel event ===
+    
     var conEle = document.querySelector('.v_01');
     var proEle = document.querySelectorAll('.v_01 .process');
     var proPos = [];
@@ -29,6 +27,8 @@ window.addEventListener('DOMContentLoaded', function () {
             var winTop = this.scrollY;
             var winHei = this.innerHeight;
             var delta = e.wheelDeltaY;
+            
+            console.log(e);
 
             if(bln){
                 bln=false;

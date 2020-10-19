@@ -5,22 +5,28 @@
     <meta charset="UTF-8">
     <title>PARANGSAE THEATER</title>
     <link rel="icon" href="img/favi.ico">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link href="css/00_index.css" rel="stylesheet" type="text/css">
-    <script src="js/theater.js"></script>
-
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
             <p>헤리티지 문화공간</p>
-            <a href="#">
+            <a href="index.html">
                 <img src="img/logo.png" alt="logo">
             </a>
-            <p>서울특별시 종로구 대학로 116 공공일호 2F 파랑새극장</p>
+            <div>
+                <p>서울특별시 종로구 대학로 116 공공일호 2F 파랑새극장</p>
+                <div class="menu-trigger">
+                       <span></span>
+                       <span></span>
+                </div>
+            </div>
         </div>
 
         <div class="title">
@@ -28,10 +34,11 @@
         </div>
 
         <nav>
-            <a href="#">I. ABOUT</a>
-            <a href="#">II. SHOW</a>
-            <a href="#">III. VENUE</a>
-            <a href="#">IV. PARANGSAE STAGE</a>
+            <a href="01_about.html">I. ABOUT</a>
+            <a href="02_show.html">II. SHOW</a>
+            <a href="03_venue.html">III. VENUE</a>
+            <a href="04_stage.html">IV. PARANGSAE STAGE</a>
+            <a href="05_contact.html">V. CONTACT</a>
         </nav>
 
     </header>
@@ -44,11 +51,12 @@
             </video>
         </section>
 
-
         <section class="c_01">
             <h2>I. ABOUT</h2>
-            <p>문화의 전초기지 대학로<br>
-                그리고 <b>파랑새 극장</b></p>
+            <div>
+                <p><span>문화의</span> <span>전초기지 대학로</span></p>
+                <p><span>그리고</span> <span><b>파랑새 극장</b></span></p>
+            </div>
             <a href="#">READ ALL ABOUT IT</a>
         </section>
 
@@ -56,40 +64,43 @@
         <section class="c_02">
             <h2>II. SHOW</h2>
             <ul class="li_show">
+<!--
                 <li>
                     <a href="#">
-                        <span>II.I</span>
+                        <p>II.I</p>
                         <div>
                             <h3>월간 데이트 休, 정민 현성 for VIP</h3>
                         </div>
-                        <span>2020 .09 .27(일) 11:00</span>
+                        <p>2020 .09 .27(일) 11:00</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span>II.II</span>
+                        <p>II.II</p>
                         <div>
                             <h3>배다해의 어쿠스틱라이브, 溫스테이지</h3>
                         </div>
-                        <span>2020 .09 .27(일) 19:00</span>
+                        <p>2020 .09 .27(일) 19:00</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span>II.III</span>
+                        <p>II.III</p>
                         <div>
                             <h3>재주소년 어쿠스틱라이브, 溫스테이지</h3>
                         </div>
-                        <span>2020 .10 .10(일) 16:00</span>
+                        <p>2020 .10 .10(일) 16:00</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <div>
-                            <h3> MORE SHOW</h3>
+                           <article><h3>MORE SHOW</h3></article>
+                            <p>→</p>
                         </div>
                     </a>
                 </li>
+-->
             </ul>
         </section>
 
@@ -120,7 +131,7 @@
 
             <article class="contact">
                 <div>
-                    <h4>contact</h4>
+                    <h4><a href="#">V. CONTACT</a></h4>
                     <p> T : 02-744-0015
                         <a href="#">parangsae.theater@00ground.kr</a>
                     </p>
@@ -135,8 +146,8 @@
 
                 <div>
                     <h4>on the web</h4>
-                    <a href="#">Instagram</a>
-                    <a href="#">00ground</a>
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">00ground</a></p>
                 </div>
             </article>
         </section>

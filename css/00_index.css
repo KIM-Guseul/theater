@@ -1,8 +1,6 @@
 @import url('common.css');
 
-html {
-    font-size: 10px;
-}
+html {font-size: 62.5%;}
 
 html,
 body {
@@ -12,69 +10,47 @@ body {
 /*========================= 헤더 ==========================*/
 
 .header {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     position: relative;
 }
 
 header .logo {
+    width: 100%;
     height: 16rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo p {
+header .logo > p {
     position: relative;
-    font-size: 1.5rem;
-    padding: 0 1rem;
-}
-
-header .logo p:first-child:before {
-    position: absolute;
-    left: 0;
-    top: -70%;
-    content: '';
-    display: block;
-    width: calc((80vw - 35rem)/2);
+    width:calc((100%-60rem)/2);
+    font-size: 1rem;
+    padding: 1.5rem 0;
+    padding-left: 0.5rem;
+    color: #303030;
+    border-bottom: 1px solid #303030;
     border-top: 1px solid #303030;
 }
 
-header .logo p:last-child:before {
-    position: absolute;
-    right: 0;
-    top: -70%;
-    content: '';
-    display: block;
-    width: calc((80vw - 35rem)/2);
+header .logo > div{
+    position: relative;
+    width:calc((100%-60rem)/2);
+    font-size: 1rem;
+    padding: 1.5rem 0;
+    text-align: right;
+    padding-right: 0.5rem;    
+    color: #303030;
+    border-bottom: 1px solid #303030;
     border-top: 1px solid #303030;
-
-}
-
-header .logo p:first-child:after {
-    position: absolute;
-    left: 0;
-    bottom: -70%;
-    content: '';
-    display: block;
-    width: calc((80vw - 35rem)/2);
-    border-bottom: 1px solid #303030;
-}
-
-header .logo p:last-child:after {
-    position: absolute;
-    right: 0;
-    bottom: -70%;
-    content: '';
-    display: block;
-    width: calc((80vw - 35rem)/2);
-    border-bottom: 1px solid #303030;
+    
 }
 
 
-
-header .logo a {
-    transform: translateX(45%);
+header .logo > a {
+    width: 20vw;
+    margin: 0 2rem;
 }
 
 header .logo a img {
@@ -83,21 +59,24 @@ header .logo a img {
 
 header .title {
     text-align: center;
-    font-size: 12rem;
-    margin: -50px 0;
+    font-size: 7vw;
+    margin-top: -50px;
 }
+
 
 header nav {
     width: 100%;
-    margin: 5rem auto;
     text-align: center;
+    overflow: hidden;
 }
 
 header nav a {
     position: relative;
-    margin-right: 9rem;
+    margin: 0 2rem;
     padding: 1rem 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    display: inline-block;
+    transform: translateY(100%);
 }
 
 header nav a:after {
@@ -122,13 +101,46 @@ header nav a:last-child {
     margin-right: 0;
 }
 
+header .logo > div .menu-trigger{
+    display: none;
+    position: relative;
+    width: 30px; height: 30px;
+    background: #303030;
+}
+header .logo > div .menu-trigger span{
+    position: absolute;
+    width: 75%; height: 3px;
+    background: #e6e3de;
+}
+header .logo > div .menu-trigger span:first-of-type{
+    top: 30%; left: 12%;
+}
+
+header .logo > div .menu-trigger span:last-of-type{
+    bottom: 30%; left: 12%;
+}
+
+header .logo > div .menu-trigger.active span:first-of-type{
+    top: 45%; left: 12%;
+    transform:rotate(45deg);
+}
+header .logo > div .menu-trigger.active span:last-of-type{
+    bottom: 45%; left: 12%;
+    transform:rotate(-45deg);
+}
+
+
+
 /*======================== 메인 ==========================*/
 
-main {}
+main {
+    width: 100%;
+}
 
 main .video {
     width: 80%;
     margin: 0 auto;
+    margin-top: 5rem;
 }
 
 main .video video {
@@ -141,7 +153,7 @@ main .video video source {}
 /*=================================*/
 
 main .c_01 {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding-bottom: 7rem;
     text-align: center;
@@ -157,12 +169,24 @@ main h2 {
 main .c_01 p {
     text-align: center;
     margin: 0 4rem 2rem 4rem;
-    font-size: 10rem;
+    font-size: 6vw;
+    overflow: hidden;
+
+}
+
+main .c_01 p span{
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    transition:.5s;
+}
+main .c_01 p span.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 main .c_01 p b {
-    font-size: 12rem;
-
+    font-size: 8vw;
 }
 
 main .c_01 a {
@@ -190,12 +214,9 @@ main .c_02 {
 
     position: relative;
     z-index: 2;
-
 }
 
-.c_02 h2,
-.c_02 span,
-.c_02 h3 {
+.c_02 h2, .c_02 h3, .c_02 p{
     color: #e6e3de;
 }
 
@@ -203,35 +224,51 @@ main .c_02 h2 {
     width: 100%;
 }
 
-main .c_02 .li_show {}
+main .c_02 .li_show {
+    width: 80%;
+    margin: 0 auto;
+}
+main .c_02 .li_show li{
+    border: 1px solid #e6e3de;
+}
 
 main .c_02 .li_show li a {
-    width: 80%;
-    height: 30wh;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #e6e3de;
-
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
+
+main .c_02 .li_show li a:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0%;
+    opacity: 0;
+    background-size: cover;
+    transition: .3s;
+}
+
 
 main .c_02 .li_show li:nth-of-type(1) a:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 0%;
-    opacity: 0;
     background: url('../img/show01.png') no-repeat 0 43%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0%;
+    opacity: 0;
     background-size: cover;
     transition: .3s;
 }
-
 main .c_02 .li_show li:nth-of-type(2) a:before {
+    background: url('../img/show02.png') no-repeat 0 70%;
     content: "";
     width: 100%;
     height: 100%;
@@ -240,13 +277,12 @@ main .c_02 .li_show li:nth-of-type(2) a:before {
     top: 50%;
     left: 0%;
     opacity: 0;
-    background: url('../img/show02.png') no-repeat 0 70%;
     background-size: cover;
     transition: .3s;
 
 }
-
 main .c_02 .li_show li:nth-of-type(3) a:before {
+    background: url('../img/show03.png') no-repeat 0 50%;
     content: "";
     width: 100%;
     height: 100%;
@@ -255,34 +291,28 @@ main .c_02 .li_show li:nth-of-type(3) a:before {
     top: 50%;
     left: 0%;
     opacity: 0;
-    background: url('../img/show03.png') no-repeat 0 50%;
     background-size: cover;
     transition: .3s;
 }
 
 main .c_02 .li_show li:nth-of-type(1) a:hover:before,
-main .c_02 .li_show li:nth-of-type(2) a:hover:before,
-main .c_02 .li_show li:nth-of-type(3) a:hover:before {
+main .c_02 .li_show li:nth-of-type(2) a:hover:before, main .c_02 .li_show li:nth-of-type(3) a:hover:before{
     top: 0;
     opacity: 1;
 }
 
-main .c_02 .li_show li a span {}
-
-main .c_02 .li_show li a span:first-child {
+main .c_02 .li_show li a p:first-child {
     text-align: left;
     font-size: 1.5rem;
     margin: 3rem 0 0 6rem;
 }
-
-main .c_02 .li_show li a span:last-child {
+main .c_02 .li_show li a p:last-child {
     text-align: right;
     font-size: 1.8rem;
     margin: 0 6rem 3rem 6rem;
     position: relative;
 }
-
-main .c_02 .li_show li a span:last-child:before {
+main .c_02 .li_show li a > p:last-child:before {
     content: '→';
     position: absolute;
     right: 50%;
@@ -291,46 +321,59 @@ main .c_02 .li_show li a span:last-child:before {
     font-size: 2rem;
 }
 
+main .c_02 .li_show li a p{opacity: 0; transition: .5s;}
+main .c_02 .li_show li.active a p{opacity: 1;}
 
 main .c_02 .li_show li a div{
     overflow: hidden;
-    
+    margin: 3.5rem auto;
+
 }
 
 main .c_02 .li_show li a div h3{
     font-size: 4.5vw;
-    margin: 3.5rem auto;
-/*
-    transform: translateY(80%);
+    transform: translateY(70%);
     opacity: 0;
-*/
+    transition: .5s;
+}
+main .c_02 .li_show li.active a div h3{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+main .c_02 .li_show li:last-of-type a div p{
+    color: #303030;
+    font-size: 2rem;
+    text-align: center;
 }
 
 main .c_02 .li_show li:last-child a {
     background: #e6e3de;
     transition: .5s;
-
 }
 
 main .c_02 .li_show li:last-child:hover  a {
     background: #f8bebe;
 }
 
-main .c_02 .li_show li:last-child  a h3 {
-    line-height: 20rem;
+
+main .c_02 .li_show li:last-child a div{
+    margin-top: 7rem;
+}
+main .c_02 .li_show li:last-child a h3 {
     color: #303030;
-    font-size: 8rem;
+    font-size: 6vw;
+}
+main .c_02 .li_show li:last-of-type a article{
+    overflow: hidden;
 }
 
-main .c_02 .li_show li:last-child  a h3:after {
-    content: '→';
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    display: block;
+main .c_02 .li_show li:last-child  a p{
+    color: #303030;
     font-size: 2rem;
-
+    margin: 2rem 0 0 0;
 }
+
 
 /*==================================*/
 
@@ -377,6 +420,7 @@ main .c_03 div article img {
 }
 
 main .c_03 div article .arrow {
+    display: inline-block;
     margin-top: 7.5rem;
     color: #e6e3de;
     font-size: 2rem;
@@ -401,18 +445,20 @@ main .c_04 {
 }
 
 main .c_04 > div {
-    width: 30%;
-    padding: 7rem 0 0 3rem;
+    width: 30vw;
+    padding: 7rem 3rem;
     margin-right: 5rem;
     border-right: 1px solid #303030;
 }
 
-main .c_04 > div a {}
+main .c_04 > div a {
+}
 
-main .c_04 > div a img {}
+main .c_04 > div a img {
+}
 
 main .c_04 .contact {
-    width: 70%;
+    width: 70vw;
     margin: 7rem 0 11rem 5.5rem;
 }
 
@@ -441,7 +487,7 @@ main .c_04 .contact div p {
 }
 
 main .c_04 .contact div a {
-    display: block;
+    display: inline-block;
     line-height: 4rem;
     font-size: 2rem;
     transition: .2s;
@@ -473,3 +519,102 @@ footer p {
     white-space: pre-wrap;
 
 }
+
+
+
+/*=======================================*/
+
+@media (max-width:1024px){
+    
+    header .logo > div p{
+        display: none;
+    }
+    header .logo > div .menu-trigger{
+        display: inline-block;
+        z-index: 2;
+    }
+    
+    header nav {
+        position: fixed;
+        z-index: 1;
+
+        left: 0; top: -100vh;
+        width: 100vw; height: 100vh;
+        background: #303030;
+        text-align: center;
+        padding: 5rem;
+        transition: .5s;
+    }  
+    header nav.active{
+        left: 0; top: 0;
+    }
+    header nav a {
+        display: block;
+        color: #e6e2de;
+        padding: 4rem 0;
+        font-size: 5rem;
+    }
+    header nav a:after {
+        border:none;
+    }
+    
+    header .logo > div{
+        padding: 0.5rem;
+    }
+    
+    .video{
+        width: 95%;
+    }
+    main .c_02 .li_show{
+        width: 100%;
+    }
+
+    
+    main .c_03 {
+        width: 100%;
+    }
+
+    main .c_03 div {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-bottom: 1.5rem;
+    }
+
+    main .c_03 div article {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+
+    main .c_03 div article:first-child {
+        border-right: none;
+        border-bottom: 1px solid #303030;
+        margin-bottom: 5rem;
+    }
+
+    
+    main .c_04 {
+        width: 100%;
+        border-top: 1px solid #303030;
+    }
+
+    main .c_04 > div {
+       display: none;
+    }
+    
+    main .c_04 .contact {
+        width: 100%;
+    }
+
+    
+}/*769*/
+
+/*============================================*/
+
+
+@media (max-width:768px){
+    
+}
+

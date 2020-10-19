@@ -8,12 +8,9 @@ header .logo p {
     color: #e6e2dd;
 }
 
-header .logo p:before, header nav:before {
-    border-top: 1px solid #e6e2dd;
-}
-
-header .logo p:after, header nav:after {
+header .logo p, header .h_rt{
     border-bottom: 1px solid #e6e2dd;
+    border-top: 1px solid #e6e2dd;
 }
 
 header nav a {
@@ -34,15 +31,15 @@ main .subject div {
 }
 
 main .subject div h2 {
-    padding: 3rem 20rem;
+    padding: 1.5rem 0;
     background: #f8bebe;
     color: #303030;
-    fons-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 1.5rem;
 }
 
 main .subject div h1 {
-    margin: 0;
+    padding: 1rem 0;
     color: #e6e2dd;
     border: 1px solid #e6e2dd;
     border-top: none;
@@ -100,8 +97,7 @@ main aside .intro li span {
 }
 main aside .intro li span:first-child{
     display: inline-block;
-    width: 30%;
-
+    margin-right: 1rem;
 }
 
 /* ======================================================== */
@@ -221,9 +217,10 @@ main .v_02 div:last-child P::after{
 
 main .v_02 div:last-child a {
     background: #e6e2dd;
-    width: 11rem;
+    width: 12rem;
+    text-align: center;
     font-size: 1.5rem;
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1.5rem;
     margin-top: 2rem;
     transition: .5s;
 }
@@ -236,3 +233,87 @@ main .v_02 div:last-child a:hover{
 main > div {
     background: #e6e2dd;
 }
+
+
+/*=====================================*/
+@media (max-width:1024px){
+    main .subject {
+        width: 95%;
+    }
+
+    header nav a.active:after {
+        border:none;
+    }
+    
+    main aside {
+    width: 100%;
+    position: static;
+    margin-top: 9rem; 
+    }
+
+    main aside h5 {
+        display: none;
+    }
+
+    main aside .intro {
+        padding: 0;
+    }
+
+    main aside .intro li {
+        display: block;
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    main aside .intro li.active span{
+        color: #e6e2dd;
+    }
+
+    main aside .intro li span {
+        white-space: normal;
+        font-size: 2.5rem;
+    }
+    
+    main aside .intro li span:first-child{
+        margin-right: 4rem;
+    }
+    
+/*  =======================================  */
+    
+    main .v_01 {
+    width: 100%;
+    }
+
+    main .v_01 .process {
+        display: block;
+        height: 100%;;
+
+    }
+
+    main .v_01 .process div {
+        width: 100%;
+        border:none;
+    }
+
+    main .v_01 .process article {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    main .v_01 .process article p {
+        white-space: normal;
+        padding-right: 10rem;
+    }
+
+} /*1024*/
+
+/*============================================*/
+
+
+@media (max-width:768px){
+    
+} /*768*/
+
+
+
+

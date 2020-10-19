@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<items>
+  <item>
+       <order>II.I</order>
+       <title>배다해의 어쿠스틱라이브, 溫스테이지</title>
+       <name>배다해</name>
+       <imgSrc>img/show02.png</imgSrc>
+       <date>2020.09.27(일) 19:00</date>
+       <price>77,000won</price>
+       <seat>지정좌석제</seat>
+       <grade>8세 이상 관람가</grade>
+       <time>90분</time>
+       <host>피지앤픽처스</host>
+       <subject>피지앤픽처스</subject>
+   </item>
+   <item>
+       <order>II.II</order>
+       <title>첫 정규앨범 《연가》 발매기념 쇼케이스</title>
+       <name>공중그늘</name>
+       <imgSrc>img/show02.png</imgSrc>
+       <date>2020.10.03(토) 18:00</date>
+       <price>35,000won</price>
+       <seat>지정좌석제</seat>
+       <grade>8세 이상 관람가</grade>
+       <time>90분</time>
+       <host>피지앤픽처스</host>
+       <subject>피지앤픽처스</subject>
+   </item>
+   <item>
+       <order>II.III</order>
+       <title>재주소년 어쿠스틱라이브, 溫스테이지</title>
+       <name>재주소년</name>
+       <imgSrc>img/2_poster.png</imgSrc>
+       <date>2020.10.10(토) 16:00</date>
+       <price>66,000won</price>
+       <seat>지정좌석제</seat>
+       <grade>8세 이상 관람가</grade>
+       <time>90분</time>
+       <host>피지앤픽처스</host>
+       <subject>피지앤픽처스</subject>
+       
+   </item>
+   <item>
+       <order>II.IV</order>
+       <title>Have a Dooriful Day＿우리 두리 첫 데이트</title>
+       <name>두리</name>
+       <imgSrc>img/2_poster.png</imgSrc>
+       <date>2020.10.10(토) 18:00</date>
+       <price>77,000won</price>
+       <seat>지정좌석제</seat>
+       <grade>8세 이상 관람가</grade>
+       <time>90분</time>
+       <host>피지앤픽처스</host>
+       <subject>피지앤픽처스</subject>
+   </item>
+</items>

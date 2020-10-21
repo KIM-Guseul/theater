@@ -151,6 +151,7 @@ main .subject h1 {
     text-align: center;
     margin: -10px 0 0 0;
     color: #303030;
+    overflow: hidden;
 }
 
 h2{

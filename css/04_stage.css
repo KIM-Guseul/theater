@@ -8,6 +8,20 @@ body {
 main .subject {
     padding-bottom: 5rem;
 }
+main .subject h1 span{display: inline-block;}
+
+main .subject h1 span:nth-of-type(1){
+    transform: translateX(-150%);
+}
+main .subject h1 span:nth-of-type(2){
+    transform: translateX(150%);
+}
+main .subject h1 span:nth-of-type(3){
+    transform: translateY(100%);
+}
+
+
+
 
 /*===========================================================*/
 
@@ -23,18 +37,32 @@ main .p_01 p {
     color: #e6e2dd;
 }
 
+main .p_01{
+    overflow: hidden;
+}
+
 main .p_01 h2 {
     text-align: center;
     margin: 0;
+    opacity: 0;
 }
 
-main .p_01 div {
+main .p_01 div:first-of-type {
+    opacity: 0;
     margin-top: 7.5rem;
     white-space: pre-line;
     text-align: center;
     font-weight: bold;
     font-size: 10rem;
+    animation: beat 1.5s linear infinite ;
 }
+
+@keyframes beat{
+    50%{transform: scale(1.02);}
+    100%{transform: scale(1);}
+}
+
+
 
 main .p_01 p {
     margin: 7rem 0;
@@ -44,9 +72,23 @@ main .p_01 p {
     line-height: 1.8;
 }
 
-main .p_01 img {
-    display: block;
-    margin: 0 auto;
+
+main .p_01 .ic_b{
+    position: relative;
+}
+
+main .p_01 .ic_b img {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    animation: spin 3s linear infinite ;
+}
+
+@keyframes spin {
+     25%{transform: translateX(-50%) rotateY(90deg);}
+     50%{transform: translateX(-50%) rotateY(180deg);}
+     75%{transform: translateX(-50%) rotateY(270deg);}
+     100%{transform: translateX(-50%) rotateY(360deg);}
 }
 
 /* ================================================================= */
@@ -58,7 +100,7 @@ main .p_02 {
 }
 
 main .p_02 > div:first-child {
-    padding: 10rem 0 10rem 20rem;
+    padding: 10rem 5vw;
     width: 40%;
     border-right: 1px solid #303030;
     white-space: pre-line;
@@ -73,30 +115,41 @@ main .p_02 .schedule {
 
 main .p_02 .schedule div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 6rem;
 }
 
 main .p_02 .schedule div a {
-    font-size: 5rem;
+    font-size: 2.5vw;
+    height: 5vw;
+    line-height: 5vw;
     color: #e6e2dd;
-    height: 8rem;
     background: #303030;
-    padding: 0 2.5rem;
+    padding: 0 1.5vw;
 }
 
 main .p_02 .schedule div span {
-    font-size: 8rem;
-    margin: -2rem 10rem;
+    font-size: 5vw;
+/*    margin: -2rem 10rem;*/
 
 }
 
 main .p_02 .schedule p {
-    font-size: 4rem;
-    text-align: center;
-    margin-top: 10rem;
-    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 1rem 6rem;
+/*    font-weight: bold;*/
 
 }
+/*======================================================*/
 
-=================================================================*/
+@media (max-width:1024px){
+    main .p_02 {
+    width: 100%;
+    padding: 4.5rem 0;
+}
+    
+
+}/*769*/
+

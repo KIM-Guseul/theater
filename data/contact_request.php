@@ -21,7 +21,4 @@ mysqli_query($db,$table);
 
 
 
-
-
-
 ?>

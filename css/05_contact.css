@@ -62,12 +62,12 @@ main .subject {
 }
 
 /*======================================*/
-@media (min-width:769px) and (max-width:1024px){
+@media (max-width:1024px){
     .t_01{
-    width: 90%;
-    margin: 0 auto;
+        width: 90%;
+        margin: 0 auto;
+    }
 }
-}/*769*/
 
 
 /*============================================*/

@@ -213,29 +213,28 @@ main .a_03 .img_btn li img {
     height: 100%;
 }
 
+/*=============================*/
 main .a_03 .img_slide {
     width: 100%;
-    height: 55vh;
+    height: 40vw;
     overflow: hidden;
     position: relative;
-
 }
 
-main .a_03 .img_slide div {
+main .a_03 .img_slide figure {
     width: 100%;
     display: none;
 }
-main .a_03 .img_slide div.active {
+main .a_03 .img_slide figure.active {
     display: block;
 }
 
-main .a_03 .img_slide div img {
+main .a_03 .img_slide figure img {
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
 }
-
 
 /*==============================================*/
 
@@ -270,7 +269,5 @@ main .a_03 .img_slide div img {
         width: 95%;
         margin: 0 auto;
     }
-
-
     
 }

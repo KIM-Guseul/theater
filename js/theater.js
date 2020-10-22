@@ -1,5 +1,3 @@
-//===== 01_about ==========================
-
 
 window.addEventListener('DOMContentLoaded', function () {
 

@@ -8,6 +8,10 @@ html, body {
 main .subject h1{
     color: #ededed;
 }
+main .subject h1 span{
+    display: inline-block;
+    transform: translateY(100%);
+}
 
 main .c_04 .contact div a:hover{
     color: #ededed;
@@ -16,6 +20,7 @@ main .c_04 .contact div a:hover{
 
 main h2 {
     margin-bottom: 8.5rem;
+    opacity: 0;
 }
 
 main h2 a:after {

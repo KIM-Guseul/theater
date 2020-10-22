@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', function () {
 // === common area load ===
-    $('.header').load('/inc_head_foot.html header',menu);
-    $('.c_04').load('/inc_head_foot.html .c_04');
-    $('footer').load('/inc_head_foot.html footer');
+    $('.header').load('inc_head_foot.html header',menu);
+    $('.c_04').load('inc_head_foot.html .c_04');
+    $('footer').load('inc_head_foot.html footer');
 
     
     function menu(){

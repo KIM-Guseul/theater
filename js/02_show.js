@@ -44,69 +44,56 @@ window.addEventListener('DOMContentLoaded', function () {
             });
 
             $('.s_01 ul').html(tagList);
-        }
-
-        conList();
+        } conList();
             
             
 // === show title flow ======
         var showTitle = document.querySelectorAll('.s_01 ul li a h3');
-        var direction=0;
-        var elW,af = '';
-
-
+        var elW=[],af = '';
             
-        function flow(){
-            direction += 5;
+        showTitle.forEach(function(el,idx){
+            elW.push(el.children[0].offsetWidth);
             
-            showTitle.forEach(function(el,idx){
-                elW = el.children[0].offsetWidth;
-                
-                if(direction <= elW){
-                    console.log('ing');
-                    
+            var clone = el.querySelector('span').cloneNode(true);
+            var clone2 = el.querySelector('span').cloneNode(true);
+            var clone3 = el.querySelector('span').cloneNode(true);
+            
+            el.append(clone);
+            el.children[1].style="left:"+elW[idx]+"px";
+            
+            el.append(clone3);
+            el.children[2].style="left:"+elW[idx]*2+"px";
+
+            el.prepend(clone2);
+            el.children[0].style="left:-"+elW[idx]+"px";                    
+            
+            flow(el,idx);
+        });
+            
+        function flow(el,idx){
+            var direction={sx:0,x:0,speend:'0s'};
+            
+            function ani(){
+                direction.sx += 5;
+
+                if(direction.sx <= elW[idx]){
                     if((idx+1) % 2 == 0){//짝수번째
-                        el.style = "transform:translateX(-"+direction+"px); ";
+                        direction.x = '-'+direction.sx;
                     }else{//홀수번째
-                        el.style = "transform:translateX("+direction+"px); ";
+                        direction.x = direction.sx;
                     }
-                    
                 }else{
-                    console.log('end');
+                    direction.x=0;
+                    direction.sx=0;
                 }
-                
-                console.log(direction+'D');
-                console.log(elW+'W');
-                
-                
-            });
-            
-            
-//            el.style.setProperty('transform', 'translateX(' + direction + 'px)');
-            
-            af = requestAnimationFrame(flow);
-            
-            cancelAf();
-
-            function cancelAf(){
-                showTitle.forEach(function(el,idx){
-
-                    elW = el.children[0].offsetWidth;
-
-                        if(elW < direction) {
-                            console.log('bb');
-                            cancelAnimationFrame(af);
-                        }
-                });
-
+               
+                el.style = "transform:translateX("+direction.x+"px)";
+                af = requestAnimationFrame(ani);
             }
-            
-            
-            
+            ani();
         }
+        
             
-        flow();
-
             
         
             

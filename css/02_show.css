@@ -152,13 +152,19 @@ main .s_01 ul li a > span {
 }
 
 main .s_01 ul li a h3 {
-    padding-bottom: 6rem;
-/*    margin-left: 10rem;*/
+    padding-bottom: 6rem; height:190px;
     font-size: 10rem;
     white-space: nowrap;
-    transition: .5s;
-
+    position:relative;
 }
+main .s_01 ul li a h3 span{
+    position:absolute;
+    top:0; left:0;
+}
+/*
+main .s_01 ul li:nth-of-type(odd) a h3 span{ right:0;}
+main .s_01 ul li:nth-of-type(even) a h3 span{left:0;}
+*/
 main .s_01 ul li:hover a h3{
     color: #ededed;
 }

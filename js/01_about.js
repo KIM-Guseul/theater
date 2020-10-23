@@ -28,11 +28,22 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     
 // === title show ======
+    var subAbout = document.querySelector('.about');
+    var arrTxt = subAbout.textContent;
     
-    var subAbout = document.querySelectorAll('.about span');
+    subAbout.innerHTML='';
+
+    for(var i = 0; i<arrTxt.length; i++){
+        var txt = '';
+        
+        txt += "<span>"+ arrTxt[i] +"</span>";
+        subAbout.innerHTML += txt;
+        
+    }
+    
+    var aboutEle = document.querySelectorAll('.about span');
     var subTit = document.querySelector('.subject h1 p');
-    
-    subAbout.forEach(function(el,idx){
+    aboutEle.forEach(function(el,idx){
         setInterval(function(){
           el.style = "transform:translateY(50%); transition:.5s;";
         },(idx+1)*80);
@@ -66,70 +77,56 @@ window.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', showA01Txt);
     
     function showA01Txt(){
-        if((a01Top+a01TitTop - winH/1.5) < this.scrollY){
+        if((a01Top+a01TitTop - winH/1.1) < this.scrollY){
+                
             a01Tit.forEach(function(el,idx){
+                setInterval(function(){
                 el.style = "transform: translateX(0); opacity:1; transition:.8s";
+            })
             });
+                
+            
         }
     }
 
+    
 // === image slide ======
     
     var imgBtn = document.querySelectorAll('.a_03 .img_btn li'); 
     var imgCon = document.querySelectorAll('.a_03 .img_slide figure');
     
     
-//    imgCon.forEach(function(el,idx){
-//        
-//        setInterval(function(){
-//            imgBtn[idx].classList.add('active');
-//            el.classList.add('active');
-//        },idx*1000);
-//        
-//    });
-    
+    var idx=0;
+    setInterval(function(){
+        idx++;
+        if(idx%4 == 0){idx= 0}
+        removeAct();
+        imgBtn[idx].classList.add('active');
+        imgCon[idx].classList.add('active');
+        console.log(idx)
+    },1500);
     
     
 // === image click ======      
     $(imgBtn).click(showImg);
-    
+
     function showImg(){
-        
         removeAct();
         
         var tIdx = $(this).index();
-        
         imgBtn[tIdx].classList.add('active');
         imgCon[tIdx].classList.add('active');
-        
     }
     
+    
+    
     function removeAct(){
+        
         for (var i = 0; i < imgBtn.length; i++) {
             imgBtn[i].classList.remove('active');
             imgCon[i].classList.remove('active');
         }
     }
-    
-
-
-    
-    
-// === image click ======   
-    
-//    for (let i = 0; i < imgBtn.length; i++) {
-//        imgBtn[i].addEventListener('click', function () {
-//            showImg(i);
-//        });
-//    }
-//    function showImg(j) {
-//        for (var i = 0; i < imgBtn.length; i++) {
-//            imgBtn[i].classList.remove('active');
-//            imgCon[i].classList.remove('active');
-//        }
-//        imgBtn[j].classList.add('active');
-//        imgCon[j].classList.add('active');
-//    }
     
 
 

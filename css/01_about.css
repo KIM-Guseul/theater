@@ -11,13 +11,14 @@ main .subject h1{
     overflow: hidden;
     padding: 5px 0;
 }
+main .subject h1 .about{display: block;}
+
 main .subject h1 p {
     display: inline-block;
     border: 5px solid #303030;
     padding: 0 5rem;
     
     transform: translateY(110%);
-
 }
 main .subject h1 span{
     display: inline-block;
@@ -186,12 +187,10 @@ main .a_03 .img_btn li {
     width: 25%;
     position: relative;
 }
-main .a_03 .img_btn li:hover {
+main .a_03 .img_btn li:hover, main .a_03 .img_btn li.active {
     filter: grayscale(100%);
 }
-main .a_03 .img_btn li.active {
-    filter: grayscale(100%);
-}
+
 main .a_03 .img_btn li.active:after {
     content: '';
     display: inline-block;
@@ -223,10 +222,11 @@ main .a_03 .img_slide {
 
 main .a_03 .img_slide figure {
     width: 100%;
-    display: none;
+    opacity: 0;
+    transition: .3s;
 }
 main .a_03 .img_slide figure.active {
-    display: block;
+    opacity: 1;
 }
 
 main .a_03 .img_slide figure img {
@@ -240,6 +240,7 @@ main .a_03 .img_slide figure img {
 
 
 @media (max-width:1024px){
+    main .subject{width:80%;}
 
     main .a_02 {width: 95vw;}
     main .a_02 .history {display: block;}

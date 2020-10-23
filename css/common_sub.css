@@ -39,7 +39,7 @@ header .logo {
 header .logo p {
     position: relative;
     width:calc((100%-60rem)/2);
-    font-size: 1rem;
+    font-size: 0.9vw;
     padding: 1.5rem 0;
     padding-left: 0.5rem;
     color: #303030;
@@ -74,7 +74,7 @@ header nav a {
     position: relative;
     display: inline;
     padding: 1rem 0.08vw;
-    font-size: 1rem;
+    font-size: 0.9vw;
 }
 
 header nav a:last-child {
@@ -140,6 +140,24 @@ header .menu-trigger.active span:last-of-type{
 
 
 /*===================================================*/
+main{
+    position: relative;
+}
+main > div:first-of-type{
+    width: 100vw; height: 100vh;
+    position: fixed;
+    z-index: 6;
+    top: -100vh; left: 0;
+    background: #303030;
+    
+}
+main > div:first-of-type img{
+    position: absolute;
+    left: 50%; top: 50%;
+    z-index: 7;
+    transform: translate(-50%,-50%);
+}
+
 
 main .subject {
     width: 80%;
@@ -147,7 +165,7 @@ main .subject {
 }
 
 main .subject h1 {
-    font-size: 11vw;
+    font-size: 18rem;
     text-align: center;
     margin: -10px 0 0 0;
     color: #303030;

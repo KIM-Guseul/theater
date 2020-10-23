@@ -1,15 +1,35 @@
 window.addEventListener('DOMContentLoaded', function () {
 // === show title ======
-    var h1 = document.querySelectorAll('.subject div h1 span');
-    var scroll = document.querySelector('.scroll');
     
-    h1.forEach(function(el,idx){
-        
+    var subject = document.querySelector('.subject div');
+    setTimeout(function(){
+        subject.style = "opacity:1; transition:.5s;";
+    },200);
+    
+    //=== add span
+    
+    var h1 = document.querySelector('.subject div h1');
+    var arrTxt = h1.textContent;
+    
+    h1.innerHTML='';
+    
+    for(var i = 0; i<arrTxt.length; i++){
+        var txt = '';
+        txt += "<span>"+ arrTxt[i] +"</span>";
+        h1.innerHTML += txt;
+    }
+    
+    //=== show title
+    
+    var venueEle = document.querySelectorAll('.subject div h1 span');
+    
+    venueEle.forEach(function(el,idx){
         setInterval(function(){
             el.style = "transform:translateY(0); transition:.5s;";
-        },(idx+1)*100);
+        },(idx+1)*80);
     });
-    
+
+    var scroll = document.querySelector('.scroll');
     setTimeout(function(){
         scroll.style = "opacity:1; transition:1s;";
     },300);

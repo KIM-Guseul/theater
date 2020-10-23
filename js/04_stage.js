@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', function(){
     
     h1.forEach(function(el,idx){
         setInterval(function(){
-            el.style = "transform: translate(0,0); transition:.8s;"
+            el.style = "transform: translate(0,0); opacity: 1; transition:.8s;"
         },(idx+1)*100);
     });
     

@@ -8,7 +8,7 @@ body {
 main .subject {
     padding-bottom: 5rem;
 }
-main .subject h1 span{display: inline-block;}
+main .subject h1 span{display: inline-block; opacity: 0;}
 
 main .subject h1 span:nth-of-type(1){
     transform: translateX(-150%);

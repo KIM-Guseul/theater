@@ -21,10 +21,11 @@
     <main>
 
         <section class="subject">
-            <h1>V. CONTACT</h1>
+            <h1><span>V.</span><span>CONTACT</span></h1>
         </section>
         
         <form action="contact_request.php" method="get">
+           
             <section class="t_01">
                 <div for="name">
                   <span>Name</span>
@@ -34,14 +35,19 @@
                   <span>Email</span>
                   <input type="email" name="email">
                 </div>
+                <div for="phon">
+                  <span>phon</span>
+                  <input type="text" name="phon" placeholder=" - 없이 입력하세요">
+                </div>
                 <div for="message">
                   <span>Message</span>
-                  <textarea name="message"></textarea>
+                  <input type="text" name="message">
                 </div>
 
                 <p><a>SUBMIT →</a></p>
 
             </section>
+            
         </form>
 
        

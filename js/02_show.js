@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
             $('.s_01 ul').html(tagList);
         } conList();
-            
+
             
 // === show title flow ======
         var showTitle = document.querySelectorAll('.s_01 ul li a h3');
@@ -70,11 +70,12 @@ window.addEventListener('DOMContentLoaded', function () {
             flow(el,idx);
         });
             
+            
         function flow(el,idx){
             var direction={sx:0,x:0,speend:'0s'};
             
             function ani(){
-                direction.sx += 5;
+                direction.sx += 1.5;
 
                 if(direction.sx <= elW[idx]){
                     if((idx+1) % 2 == 0){//짝수번째
@@ -94,20 +95,10 @@ window.addEventListener('DOMContentLoaded', function () {
         }
         
             
-            
-        
-            
-         
-           
-            
-            
-            
+
             
         }
     });
 
     
-    
-    
-
 });//end

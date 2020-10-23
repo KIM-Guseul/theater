@@ -63,9 +63,10 @@ main .s_01 ul li div{
     top: 0%;
     left: 0%;
     z-index: -1;
-    opacity: 0;
     background-size: cover;
-    transition: .8s;
+    transition: .5s;
+    opacity: 0;
+    transform: translateY(50%);
 }
 main .s_01 ul li div img{
     width: 100%;
@@ -134,9 +135,10 @@ main .s_01 ul li:nth-of-type(1):hover div,
 main .s_01 ul li:nth-of-type(2):hover div,
 main .s_01 ul li:nth-of-type(3):hover div, 
 main .s_01 ul li:nth-of-type(4):hover div{
-
     opacity: 1;
-    top: -180%;
+    top: -150%;
+    transform: translateY(0);
+
 }
 
 main .s_01 ul li a {
@@ -152,7 +154,7 @@ main .s_01 ul li a > span {
 }
 
 main .s_01 ul li a h3 {
-    padding-bottom: 6rem; height:190px;
+    padding-bottom: 6rem; height:180px;
     font-size: 10rem;
     white-space: nowrap;
     position:relative;
@@ -161,10 +163,7 @@ main .s_01 ul li a h3 span{
     position:absolute;
     top:0; left:0;
 }
-/*
-main .s_01 ul li:nth-of-type(odd) a h3 span{ right:0;}
-main .s_01 ul li:nth-of-type(even) a h3 span{left:0;}
-*/
+
 main .s_01 ul li:hover a h3{
     color: #ededed;
 }

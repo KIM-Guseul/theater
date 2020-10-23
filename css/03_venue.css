@@ -30,6 +30,7 @@ main .subject {
 
 main .subject div {
     width: 100%;
+    opacity:0;
 }
 
 main .subject div h2 {

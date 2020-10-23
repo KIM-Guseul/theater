@@ -1,12 +1,40 @@
+window.onbeforeunload = function(){
+
+};
+
 window.addEventListener('DOMContentLoaded', function () {
-// === common area load ===
+    
+// === loading ======
+    $('main').prepend('<div><img src="/img/logoW.png"></div>');
+    var loading =  document.querySelector('main >div');
+    
+//    window.onbeforeunload = loadI();
+    
+    function loadI(){
+        loading.style = "top:0;"; 
+    }
+    function loadF(){
+        loading.style = "top:-100vh;";
+    }
+    
+//    loadI();
+//    loadF();
+    
+    
+    
+// === common area load ======
     $('.header').load('inc_head_foot.html header',menu);
     $('.c_04').load('inc_head_foot.html .c_04');
     $('footer').load('inc_head_foot.html footer');
+    
+    
+    
+    
+    
 
     
     function menu(){
-        
+     
 // === nav pop ===
         var btnMenu = document.querySelector('.menu-trigger');
         var navPop = document.querySelector('header .h_rt nav');
@@ -15,6 +43,7 @@ window.addEventListener('DOMContentLoaded', function () {
             btnMenu.classList.toggle('active');
             navPop.classList.toggle('active');
         });
+        
         
 // === nav addclass active ===
         var menu = document.querySelectorAll('nav a');

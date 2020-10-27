@@ -1,13 +1,17 @@
 window.addEventListener('DOMContentLoaded', function () {
-// === show title ======
+//=== logo color change======
+    setTimeout(function(){
+        var logo = $('header .logo a img');
+        $(logo).attr('src', 'img/logoW.png');
+    },10);
     
+// === show title frame ======
     var subject = document.querySelector('.subject div');
     setTimeout(function(){
         subject.style = "opacity:1; transition:.5s;";
     },200);
     
     //=== add span
-    
     var h1 = document.querySelector('.subject div h1');
     var arrTxt = h1.textContent;
     
@@ -20,7 +24,6 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     
     //=== show title
-    
     var venueEle = document.querySelectorAll('.subject div h1 span');
     
     venueEle.forEach(function(el,idx){
@@ -37,7 +40,6 @@ window.addEventListener('DOMContentLoaded', function () {
     
     
 // === scroll event
-    
     var v01 = document.querySelector('.v_01');
     var v01Top = v01.offsetTop;
     

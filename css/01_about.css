@@ -121,7 +121,7 @@ main .a_02 .history > div{
     transform: translateX(-50%);
     background: #e6e3de;
     padding: 10px;
-    animation: spin 3s linear infinite ;
+    animation: spin 5s linear infinite ;
 }
 
 @keyframes spin {

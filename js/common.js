@@ -1,36 +1,10 @@
-window.onbeforeunload = function(){
-
-};
-
 window.addEventListener('DOMContentLoaded', function () {
-    
-// === loading ======
-    $('main').prepend('<div><img src="/img/logoW.png"></div>');
-    var loading =  document.querySelector('main >div');
-    
-//    window.onbeforeunload = loadI();
-    
-    function loadI(){
-        loading.style = "top:0;"; 
-    }
-    function loadF(){
-        loading.style = "top:-100vh;";
-    }
-    
-//    loadI();
-//    loadF();
-    
-    
-    
+
 // === common area load ======
+    
     $('.header').load('inc_head_foot.html header',menu);
     $('.c_04').load('inc_head_foot.html .c_04');
     $('footer').load('inc_head_foot.html footer');
-    
-    
-    
-    
-    
 
     
     function menu(){
@@ -45,51 +19,23 @@ window.addEventListener('DOMContentLoaded', function () {
         });
         
         
-// === nav addclass active ===
-        var menu = document.querySelectorAll('nav a');
+// === nav active ===
+        var menu = document.querySelector('nav');
+        menu.addEventListener('click',function(e){
+            e.preventDefault();
+            
+            var link = e.target.getAttribute('href');
+            var page = e.target.dataset.num;
+
+            localStorage.page = page;
+            location.href = link;
+        });
+        var page = localStorage.page;
         
-        for(let i = 0; i<menu.length; i++){
-            menu[i].addEventListener('click',function(){
-                var pageName = this.textContent;
-                localStorage.page = pageName;
-                menuActive(i);
-            });
-        }
-        
-        function menuActive(j){
-            for( var i = 0; i<menu.length; i++){
-                    menu[i].classList.remove('active'); 
-            }
-            menu[j].classList.add('active'); 
-        }
+        menu.children[page].classList.add('active');
         
     }
-    
-//    
-//    var page = localStorage.page;
-//    if(page == 'ABOUT') aa();
-//    
-//    switch(page){
-//        case 'ABOUT': aa(); bleak;
-//        case 'SERVICE': bb(); bleak;
-//        case 'ABOUT': aa(); bleak;
-//        case 'ABOUT': aa(); bleak;
-//    }
-//    
-//    
-//    p1
-//        init1();
-//        init2();
-//        init3();
-//        init4();
-//    
-    
-    
-    
-    
 
-    
-    
     
     
     

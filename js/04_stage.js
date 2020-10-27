@@ -11,77 +11,67 @@ window.addEventListener('DOMContentLoaded', function(){
     var calender,schedule = '';
     var year, month, day, artist, time;
             
-        data.schedule.forEach(function(value,key){
-            year = value.year;
-            month = value.month;
-            day = value.day;
-            artist = value.artist;
-            time = value.time;
+    // === funCal ======
+    var today = new Date();
+    var mm = today.getMonth()+1;
+    var yyyy = today.getFullYear();
+    if(mm<10){mm = '0'+mm;}
+    
+    function funCal(){
+        var d = new Date('y-m-d');
+        calender ="<div>";
+        calender +="<a>←</a>";
+        calender +="<span>"+yyyy+" . "+mm+"</span>";
+        calender +="<a>→</a>";
+        calender +="</div>";
+
+        $('.schedule').html(calender);
+    }funCal();// show calender 
             
-            funCal();// show calender 
-            
+    data.schedule.forEach(function(value,key){
+        year = value.year;
+        month = value.month;
+        day = value.day;
+        artist = value.artist;
+        time = value.time;
+        
+        $('.schedule').append(schedule);
+        
+        if(yyyy == year && mm == month){
             schedule+= "<p><b>date</b> : "+year+".&nbsp"+month+".&nbsp"+day+"</p>";
             schedule+= "<p><b>artist</b> : "+artist+"</p>";
             schedule+= "<p><b>time</b> : "+time+"</p><br>";
-            
-            $('.schedule').append(schedule);
-
-//        schedule = "<p>일정이 없습니다.</p>";
-//    $('.schedule').append(schedule);
-        });//call data successful
-            
-// === select month ======
-    
-        var mBtn = document.querySelectorAll('.schedule div a');
-            
-            
-        $(mBtn).click(selectMon);
-            
-        function selectMon(){
-            
-            var sIdx = $(this).index();
-            console.log(this);
-            console.log(sIdx);
-
-            
-            mBtn.forEach(function(el,idx){
-//                
-//            console.log(el);
-//            console.log(idx);
-//                
-            });
-    
-
-
-        
+        }else{
+            schedule = "<p>일정이 없습니다.</p>";
         }
-                
-
+    });
+   
+// === select date ======
     
+    var mBtn = $('.schedule div a');
+
+    $(mBtn).click(selectM);
+
+        function selectM(){
+            var sIdx = $(this).index();
+
+            if(sIdx == 0){
+                console.log(--mm)
+                
+                
+            }else{
+                console.log(++mm)
+            }
+
+        }
+
 
     }
     });
     
     
-    function funCal(){
-        calender ="<div>";
-        calender +="<a>←</a>";
-        calender +="<span>2020 .12</span>";
-        calender +="<a>→</a>";
-        calender +="</div>";
-
-        $('.schedule').html(calender);
-    }
-    
-    
 
 
-
-    
-    
-    
-    
-    
     
 // === show title ====== 
     var h1 = document.querySelectorAll('.subject h1 span');

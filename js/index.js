@@ -52,6 +52,27 @@ window.addEventListener('DOMContentLoaded', function () {//start
         
     });
     
+//=== show title ======
+    var title = document.querySelector('.title h1');
+    var titleArr = title.textContent;
+    
+        title.innerHTML = '';
+    
+    for(var i = 0; i<titleArr.length; i++){
+        var txt = '';
+        
+        txt += "<span>"+ titleArr[i] +"</span>";
+        title.innerHTML += txt;
+    }
+    
+    var titleEle = document.querySelectorAll('.title h1 span');
+    
+        titleEle.forEach(function(el,idx){
+            setInterval(function(){
+                el.style = "transform: translateX(0); transform: translateY(0); transform: rotate(0deg); opacity:1;"
+            },idx*50);
+        });
+        
 
 // === nav pop ======
     var btnMenu = document.querySelector('.menu-trigger');
@@ -70,12 +91,28 @@ window.addEventListener('DOMContentLoaded', function () {//start
     function showNav(){
         
         navEle.forEach(function(el,idx){
-            
-            setInterval(function(){
-               el.style = "transform:translateY(0); transition:.5s;";
-            },((idx+1) *50));
+            setTimeout(function(){
+                setInterval(function(){
+                   el.style = "transform:translateY(0); transition:.5s;";
+                },idx *60);
+
+            },500);
         });
     }
+    
+// === nav addclass active ===
+        var menu = document.querySelector('nav');
+        menu.addEventListener('click',function(e){
+            e.preventDefault();
+            
+            var link = e.target.getAttribute('href');
+            var page = e.target.dataset.num;
+
+            localStorage.page = page;
+            location.href = link;
+        });
+        var page = localStorage.page;
+        menu.children[page].classList.add('active');
     
     
     var winH = window.innerHeight;

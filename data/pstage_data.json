@@ -4,13 +4,14 @@
             "year":"2020",
             "month":"10",
             "day":"30",
-            "artist":"abcd",
+            "artist":"가수가수",
             "time":"22:00"
         },
         {
             "year":"2020",
             "month":"11",
-            "day":"30",            "artist":"dcba",
+            "day":"30",            
+            "artist":"가수가수",
             "time":"20:00"
         }
     ]

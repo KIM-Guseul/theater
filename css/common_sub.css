@@ -388,9 +388,9 @@ footer p {
     
     
 
-/*============================================*/
-
+/*======= 1024 ============*/
 @media (max-width:1024px){
+    html {font-size: 55%;}
     body{
         position: relative;
 
@@ -443,6 +443,12 @@ footer p {
         width: 95%;
     }
     
+/*
+    main .subject h1{
+        font-size: 15rem;
+    }
+*/
+    
     main .c_03 {
         width: 100%;
     }
@@ -488,6 +494,11 @@ footer p {
 
 
 @media (max-width:768px){
+    html {font-size: 40%;}
+    
+    main .subject h1{
+        font-size: 15vw;
+    }
     
 }
 

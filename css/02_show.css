@@ -154,7 +154,8 @@ main .s_01 ul li a > span {
 }
 
 main .s_01 ul li a h3 {
-    padding-bottom: 6rem; height:180px;
+    padding-bottom: 6rem; 
+    height:16rem;
     font-size: 10rem;
     white-space: nowrap;
     position:relative;

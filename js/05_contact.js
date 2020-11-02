@@ -20,11 +20,12 @@ window.addEventListener('DOMContentLoaded', function(){
         var email = $('input[name=email]').val();
         var phon = $('input[name=phon]').val();
         var message = $('input[name=message]').val();
-        $('input').css('border','2px solid #000');
+        
+        $('input').css('border','2px solid #303030');
+        
         function feedback(el){
             $('input[name='+el+']').css('border','2px solid #bd162c');
             $('input[name='+el+']').val('');
-            
         }
         
         if(!nameCheck.test(name)){

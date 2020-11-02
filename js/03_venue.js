@@ -102,6 +102,7 @@ window.addEventListener('DOMContentLoaded', function () {
             top:0, left:0, behavior: 'smooth'
         });
     });
+
     
 //// === mousewheel event ===
 //    

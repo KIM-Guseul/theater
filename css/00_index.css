@@ -1,7 +1,5 @@
 @import url('common.css');
 
-html {font-size: 62.5%;}
-
 html,
 body {
     background: #e6e2de;
@@ -367,7 +365,6 @@ main .c_02 .li_show li.active a p{opacity: 1;}
 main .c_02 .li_show li a div{
     overflow: hidden;
     margin: 3.5rem auto;
-
 }
 
 main .c_02 .li_show li a div h3{
@@ -565,7 +562,8 @@ footer p {
 /*=======================================*/
 
 @media (max-width:1024px){
-    
+    html {font-size: 55%;}
+
     header .logo > div p{
         display: none;
     }
@@ -649,12 +647,11 @@ footer p {
     }
 
     
-}/*769*/
+}
 
-/*============================================*/
-
-
+/*769*/
 @media (max-width:768px){
-    
+    html {font-size: 40%;}
+
 }
 

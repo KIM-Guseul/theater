@@ -68,7 +68,7 @@ main .subject h1 span {
 /*======================================*/
 @media (max-width:1024px){
     .t_01{
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
     }
 }

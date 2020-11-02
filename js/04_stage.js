@@ -6,16 +6,22 @@ window.addEventListener('DOMContentLoaded', function(){
         data:{},
         success:function(data){
             
-// === schedule ======
+// === .schedule ======
     
     var calender,schedule = '';
     var year, month, day, artist, time;
             
-    // === funCal ======
+            
+// === show date ======
     var today = new Date();
+    var mmList = [1,2,3,4,5,6,7,8,9,10,11,12];
+            
     var mm = today.getMonth()+1;
     var yyyy = today.getFullYear();
     if(mm<10){mm = '0'+mm;}
+            
+    var mmSelect = new Date();
+            
     
     function funCal(){
         var d = new Date('y-m-d');
@@ -26,8 +32,29 @@ window.addEventListener('DOMContentLoaded', function(){
         calender +="</div>";
 
         $('.schedule').html(calender);
-    }funCal();// show calender 
+    }funCal(); 
+       
             
+// === select date ======
+    
+    var mBtn = $('.schedule div a');
+
+    $(mBtn).click(selectM);
+
+        function selectM(){
+            var sIdx = $(this).index();
+
+            if(sIdx == 0){//전월
+                console.log(--mm);
+       
+            }else{//익월
+                console.log(++mm);
+                
+            }
+        }
+            
+            
+//=== show schedule ======
     data.schedule.forEach(function(value,key){
         year = value.year;
         month = value.month;
@@ -46,24 +73,8 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     });
    
-// === select date ======
-    
-    var mBtn = $('.schedule div a');
+            
 
-    $(mBtn).click(selectM);
-
-        function selectM(){
-            var sIdx = $(this).index();
-
-            if(sIdx == 0){
-                console.log(--mm)
-                
-                
-            }else{
-                console.log(++mm)
-            }
-
-        }
 
 
     }

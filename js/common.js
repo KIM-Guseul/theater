@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', function () {
         
 // === nav active ===
         var menu = document.querySelector('nav');
+        
         menu.addEventListener('click',function(e){
             e.preventDefault();
             
@@ -33,13 +34,7 @@ window.addEventListener('DOMContentLoaded', function () {
         var page = localStorage.page;
         
         menu.children[page].classList.add('active');
-        
     }
-
-    
-    
-    
-    
     
     
 });//end

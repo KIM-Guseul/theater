@@ -18,13 +18,4 @@ a {text-decoration: none; color: #303030;}
 table{border-collapse: collapse;}
 
 
-@media (max-width:1024px){
-    html {font-size: 55%;}
-}
-
-@media (max-width:768px){
-    html {font-size: 40%;}
-}
-
-
 

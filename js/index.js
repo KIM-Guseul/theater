@@ -31,12 +31,13 @@ window.addEventListener('DOMContentLoaded', function () {//start
                         
                         $('.li_show').append(tagList);
                     }
+
                 });
                 
                 var aTag = '';
-                
+            
                 aTag = "<li>";
-                aTag += "<a href='+ # +'>";
+                aTag += "<a href='02_show.html'>";
                 aTag += "<div>";
                 aTag += "<article><h3>MORE SHOW</h3></article>";
                 aTag += "<p>→</p>";
@@ -45,6 +46,7 @@ window.addEventListener('DOMContentLoaded', function () {//start
                 aTag += "</li>";
                 
                 $('.li_show').append(aTag);
+                
             }
             c02(); // === c_02 show
 

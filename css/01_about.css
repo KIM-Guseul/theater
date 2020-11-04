@@ -45,6 +45,7 @@ main .a_00 .arrow {
     opacity: 0;
     transition: 1s;
     animation: arrow 1.5s linear infinite;
+    z-index: 3;
 }
 
 @keyframes arrow{
@@ -122,6 +123,7 @@ main .a_02 .history > div{
     background: #e6e3de;
     padding: 10px;
     animation: spin 5s linear infinite ;
+    z-index: 3;
 }
 
 @keyframes spin {
@@ -240,7 +242,14 @@ main .a_03 .img_slide figure img {
 
 
 @media (max-width:1024px){
-    main .subject{width:80%;}
+    
+    main .subject{width:90%;}
+    main .a_00 h2 {font-size: 1.5rem;
+
+}
+    main .a_01 div {font-size: 6rem;}
+    main .a_01 div b {font-size: 8rem;}
+
 
     main .a_02 {width: 95vw;}
     main .a_02 .history {display: block;}
@@ -270,5 +279,12 @@ main .a_03 .img_slide figure img {
         width: 95%;
         margin: 0 auto;
     }
+    main .a_03 .img_btn li:hover{
+    filter: none;
+}
     
 }
+@media (max-width:768px){
+
+}
+

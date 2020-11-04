@@ -389,7 +389,7 @@ main .c_02 .li_show li:last-child a {
     transition: .5s;
 }
 
-main .c_02 .li_show li:last-child:hover  a {
+main .c_02 .li_show li:last-child:hover a {
     background: #f8bebe;
 }
 
@@ -599,14 +599,14 @@ footer p {
     header .logo > div{
         padding: 0.5rem;
     }
-    
-    .video{
+
+
+    main .video{
         width: 95%;
     }
     main .c_02 .li_show{
         width: 100%;
     }
-
     
     main .c_03 {
         width: 100%;
@@ -645,6 +645,14 @@ footer p {
     main .c_04 .contact {
         width: 100%;
     }
+    
+/*  remove hover  */
+    main .c_01 a:hover, main .c_02 .li_show li:last-child:hover a, main .c_04 .contact div a:hover {
+    background: none;
+    }
+    main .c_02 .li_show li a:hover:before{
+    opacity: 0;
+    }
 
     
 }
@@ -652,6 +660,6 @@ footer p {
 /*769*/
 @media (max-width:768px){
     html {font-size: 40%;}
-
+    header .title {margin-top: -20px;}
 }
 

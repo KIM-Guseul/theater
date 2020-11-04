@@ -346,9 +346,11 @@ main .process, main >div:last-of-type {
         white-space: normal;
         padding-right: 10rem;
     }
+/*
     main .v_02 div:last-child a:hover{
         background: none;
     }
+*/
     header nav a.active:after, header nav a:hover:after {
         border-top: none;
     }

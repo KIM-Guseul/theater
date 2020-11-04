@@ -165,14 +165,14 @@ main .s_01 ul li a h3 span{
     top:0; left:0;
 }
 
+/*
 main .s_01 ul li:hover a h3{
     color: #ededed;
 }
-
 main h2 a:hover{
     color: none;
 }
 main .s_01 ul li:nth-of-type(1):hover div{
     opacity:0;
-
 }
+*/

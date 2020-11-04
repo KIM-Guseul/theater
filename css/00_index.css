@@ -647,9 +647,11 @@ footer p {
     }
     
 /*  remove hover  */
+/*
     main .c_01 a:hover, main .c_02 .li_show li:last-child:hover a, main .c_04 .contact div a:hover {
     background: none;
     }
+*/
     main .c_02 .li_show li a:hover:before{
     opacity: 0;
     }
